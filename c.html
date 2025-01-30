@@ -1,0 +1,81 @@
+
+<!-- 
+ 1.   .click()    ->  it is used to activate the hidden element
+ 2.   .files[0]   ->  it is used to access the files from the input of type file
+ 3.   files[0].name -> gives the name of the file
+ 4.   files[0].type -> gives the type of the file
+ 5.   files[0].size -> gives the size of the file
+ 6.   startsWith("")  and endsWith("") -> will see if the file starts or ends
+ 7.   URL.createObjectURL() -> it create the file into image source
+ 8.   navigator.clipboard.writetext()  -> it is the Copy the text to clipboard API
+ 9.   navigator.clipboard.writetext().then(()=>{}).catch(()=>{}) -> it gives the then and catch 
+ 10.  if (!window.EyeDropper) {
+        alert("EyeDropper API not supported.");
+        return;
+      }
+      const eyeDropper = new EyeDropper();
+      const openResult = eyeDropper.open();
+      openResult.then(result => {
+        color = result.sRGBHex          -> it give the color in object form of sRBGHex value
+      }).catch(error => {});
+
+11.  new EyeDropper().open().then(()=>{}).catch(()=>{})  -> it is the check the color and give the color code in hex
+  -->
+
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Finder From the Photos</title>
+    <script src="https://kit.fontawesome.com/41cd0c8b09.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="c.css">
+</head>
+<body>
+    <div class="headContainer">
+<!-- Image Container -->
+        <div class="imageContainer" id="imageContainer">
+            Select the image
+        </div>
+<!-- Button Container -->
+        <div class="buttonContainer">
+            <div class="button">
+                <input type="file" class="inputFile" id="inputFile">
+                <button class="choosePhoto" id="choosePhoto">Choose Photo</button>
+            </div>
+            <div class="button">
+                <button class="pickColor" id="pickColor">Pick a Color</button>
+            </div>
+        </div>
+<!-- Color Codes -->
+ <div class="codeContainer">
+
+    <div class="colorContainer">
+        <div class="rgbContainer">
+            <input type="text" name="rgbColor" id="rgb" >
+            <div class="paste" id="paste1"><i class="fa-regular fa-paste"></i></div>
+        </div>
+        <div class="hexContainer">
+            <input type="text" name="hexColor" id="hex">
+            <div class="paste" id="paste2"><i class="fa-regular fa-paste"></i></div>
+        </div>
+    </div>
+
+    <div class="colorShower">
+        <div class="colorDisplay" id="colorDisplay"></div>
+    </div>
+    
+ </div>
+
+ <!-- Copied or Not -->
+  <div class="copied">
+    <p class="copiedPara" id="copiedPara">Copied to the Clipboard</p>
+  </div>
+
+
+    </div>
+    <script src="c.js"></script>
+</body>
+</html>

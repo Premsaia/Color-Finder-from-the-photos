@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    background-color: blue;
+}
+.headContainer{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid tomato;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+.imageSource{
+    border: 1px solid tomato;
+    background-color: white;
+}
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.choosePhoto , .pickColor{
+    width: 120px;
+    height: 50px;
+    font-size: medium;
+    background-color: blue;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.inputFile{
+    display: none;
+}
+.codeContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid tomato;
+    margin-top: 20px;
+    padding: 20px 0px;
+    margin-bottom: 10px;
+}
+.colorContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.rgbContainer,.hexContainer{
+    margin-top: 15px;
+    border: 1px solid tomato;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    padding-right: 10px;
+}
+#rgb,#hex{
+    border: none;
+    /* width: 360px;
+    height: 20px; */
+    height: 30px;
+}
+.colorShower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+.colorDisplay{
+    border: 1px solid tomato;
+    width: 150px;
+    height: 70px;
+}
+.copied{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copiedPara{
+    font-weight: 700;
+    padding: 8px;
+    border-radius: 10px;
+    background-color: green;
+    color: white;
+    display: none;
+}
+.paste{
+    cursor: pointer;
+}
